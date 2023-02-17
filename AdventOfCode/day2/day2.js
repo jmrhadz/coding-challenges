@@ -137,7 +137,7 @@ function howToPlay(array){
         switch (strategy) {
             //win   
             case "Z":
-                console.log("win")
+                // console.log("win")
                 //add points for winning
                 score += 6;
                 //decide hand played and add points
@@ -152,7 +152,7 @@ function howToPlay(array){
                         score += 1;
                         break;
                 }
-                console.log(score)
+                // console.log(score)
                 break;
             //lose
             case "X":
