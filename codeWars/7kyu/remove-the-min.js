@@ -18,7 +18,7 @@ Examples
 * Input: [2,2,1,2,1], output = [2,2,2,1]
 */
 
-//import lodash
+//import lodash for comparing arrays in testing
 const _ = require('lodash')
 
 
