@@ -33,3 +33,4 @@ function removeSmallest(numbers) {
 t.testFunction(removeSmallest,[1,2,3,4,5],[2,3,4,5])
 t.testFunction(removeSmallest,[5,3,2,1,4],[5,3,2,4])
 t.testFunction(removeSmallest,[2,2,1,2,1],[2,2,2,1])
+
