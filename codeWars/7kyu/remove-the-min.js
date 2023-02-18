@@ -18,10 +18,7 @@ Examples
 * Input: [2,2,1,2,1], output = [2,2,2,1]
 */
 
-//import lodash
-const _ = require('lodash')
-
-
+const t = require('../testFunction')
 
 function removeSmallest(numbers) {
     let arr = [...numbers]        //copy input array
@@ -33,12 +30,6 @@ function removeSmallest(numbers) {
 
   //tests
 
-function testRemoveSmallest(input, expectedOutput){
-    const test = removeSmallest(input)
-    console.log(`Does ${test} equal ${expectedOutput}? ${ (_.isEqual(test, expectedOutput)) ? 'yes' : 'no' }`)
-}
-
-  
-testRemoveSmallest([1,2,3,4,5],[2,3,4,5])
-testRemoveSmallest([5,3,2,1,4],[5,3,2,4])
-testRemoveSmallest([2,2,1,2,1],[2,2,2,1])
+t.testFunction(removeSmallest,[1,2,3,4,5],[2,3,4,5])
+t.testFunction(removeSmallest,[5,3,2,1,4],[5,3,2,4])
+t.testFunction(removeSmallest,[2,2,1,2,1],[2,2,2,1])
