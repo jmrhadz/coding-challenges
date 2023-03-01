@@ -11,3 +11,9 @@ module.exports.testArrays = function(testingFunction, arrayOfInputs, arrayOfExpe
     console.log(`Does ${test} equal ${arrayOfExpectedOutput}?
      ${ (_.isEqual(test, arrayOfExpectedOutput)) ? 'yes' : 'no' }`)
 }
+
+module.exports.testInputsSingleOutput= function(testingFunction, arrayOfInputs, expectedOutput){
+    let test = testingFunction(...arrayOfInputs)
+    console.log(`Does ${test} equal ${expectedOutput}?
+     ${ (_.isEqual(test, expectedOutput)) ? 'yes' : 'no' }`)
+}
