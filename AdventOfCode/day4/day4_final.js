@@ -98,8 +98,13 @@ let smallerSet = new Set();
             newSetFromRange(elf1Min, elf1Max, smallerSet)
         }
 
+        //add to part one tally if smaller set is subset of larger set
         if(isSuperset(largestSet,smallerSet)) partOneResults++;
+
+        //add to part two tally if sets overlap
         if(setOverlap(largestSet,smallerSet)) partTwoResults++;
+
+        //clear sets
         largestSet.clear();
         smallerSet.clear();
     })
@@ -107,12 +112,14 @@ let smallerSet = new Set();
 console.log("Part 1:", partOneResults)
 console.log("Part 2:", partTwoResults)
 
+
 function newSetFromRange(min, max, setName){
     for(let i = +min; i <= +max; i++){
         setName.add(i)
     }
 }
 
+// returns false if set does not contain even a single part of the subset
 function isSuperset(set, subset) {
     for(const el of subset) {
         if (!set.has(el)) {
@@ -122,6 +129,7 @@ function isSuperset(set, subset) {
     return true;
 }
 
+// returns true if overlap set has size > 0
 function setOverlap(setA, setB) {
     const overlap = new Set();
     for(const el of setB) {
